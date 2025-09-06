@@ -29,8 +29,12 @@ export class DataBinding {
 
     setTimeout(() => {
       this.rollNo = 7777;
-    },1000);
-
-    //this.courseName = "123";
+    }, 10000);
   }
-}
+
+
+    showAlert() {
+      alert("welcome to Angular 20")
+    }
+  }
+
