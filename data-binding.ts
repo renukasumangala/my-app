@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { isReactive } from '@angular/core/primitives/signals';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-data-binding',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './data-binding.html',
   styleUrl: './data-binding.css'
 })
@@ -17,11 +18,18 @@ export class DataBinding {
 
   rollNo: number = 222;
 
+  minTestLength = 12;
+  spanClassName = 'secondary'
+
   constructor(){
     console.log(this.courseName);
 
     this.courseName = "Angular 20 Tutorial";
     console.log(this.courseName);
+
+    setTimeout(() => {
+      this.rollNo = 7777;
+    },1000);
 
     //this.courseName = "123";
   }
