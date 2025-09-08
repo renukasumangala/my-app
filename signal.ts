@@ -15,7 +15,13 @@ export class Signal {
 
   courseDuration = signal<string>('2 Months');
 
-  cityList = signal<string[]>(["Pune","Mumbai"]);
+  cityList = signal<string[]>(["Pune","Mumbai"])
+
+  studentObj = signal<any>({
+  name: 'AAA',
+  city:'Pune'
+})
+
 
   changeDuration() {
     this.courseName = "React js";
@@ -25,6 +31,15 @@ export class Signal {
 
   addcity(cityName: string) {
    this.cityList.update((old: string[])=> [...old, cityName]);
+  }
+
+  changeCity() {
+    this.studentObj.update((oldobj: any)=> ({...oldobj,city:'Thane'}))
+
+    this.studentObj.set({
+      name: 'AAA',
+      city: 'Mumbai'
+    })
   }
 
 }
