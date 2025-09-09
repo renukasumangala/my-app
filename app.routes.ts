@@ -3,6 +3,7 @@ import { ControlFlow } from './components/control-flow/control-flow';
 import { DataBinding } from './components/data-binding/data-binding';
 import { Signal } from './components/signal/signal';
 import { Attribute } from './components/attribute/attribute';
+import { NotFound } from './components/not-found/not-found';
 
 export const routes: Routes = [
     {
@@ -25,5 +26,9 @@ export const routes: Routes = [
     {
         path: 'attribute',
         component: Attribute
+    },
+    {
+        path:'**',
+        component: NotFound
     }
 ];
