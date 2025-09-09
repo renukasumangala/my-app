@@ -4,6 +4,7 @@ import { DataBinding } from './components/data-binding/data-binding';
 import { Signal } from './components/signal/signal';
 import { Attribute } from './components/attribute/attribute';
 import { NotFound } from './components/not-found/not-found';
+import { Photos } from './components/photos/photos';
 
 export const routes: Routes = [
     {
@@ -26,6 +27,10 @@ export const routes: Routes = [
     {
         path: 'attribute',
         component: Attribute
+    },
+    {
+        path:'photos',
+        component: Photos
     },
     {
         path:'**',
