@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -11,4 +11,10 @@ export class ControlFlow {
 
 
   selectedCaste: string = '';
+
+  isStudentActive = signal<boolean>(false);
+
+  changeStatus(value: boolean) {
+    this.isStudentActive.set(value)
+  }
 }
