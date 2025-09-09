@@ -17,4 +17,15 @@ export class ControlFlow {
   changeStatus(value: boolean) {
     this.isStudentActive.set(value)
   }
+
+  cityList = ["Pune","Nagpur","Mumbai","Solapur"];
+
+
+  studentList = [
+    {name:'AAA',city:'Pune', status:true},
+    {name:'BBB',city:'Mumbai', status:false},
+    {name:'CCC',city:'Pune', status:false},
+    {name:'DDD',city:'Nagpur', status:true}
+  ]
+  
 }
